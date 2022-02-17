@@ -8,7 +8,7 @@ Criei um **método** para receber um inteiro que será a quantidade de degraus q
 Fiz um Loop que acontecerá enquanto a quantidade de linhas for maior do que 0, dentro desse loop foi criado mais um loop que irá colocar a quantidade de espaços, e o outro loop irá colocar a quantidade de asteriscos, ao fim dos dois loops eu verifico se a quantidade de linhas, se for igual a 1 eu pulo uma linhha, modifico a quantidade de linhas, quantidade de espaços em branco e a quantidade de asteriscos e retorno para o loop, caso não eu encerro meu programa.
 
 ~~~java
-		public static void geraEscada(int quantidadeDegraus) {
+	public static void geraEscada(int quantidadeDegraus) {
 		int quantidadeDeAsteriscos = 1;
 		int quantidadeDeLinhas = quantidadeDegraus;
 		int quantidadeEspacoEmBranco = quantidadeDegraus - quantidadeDeAsteriscos;
