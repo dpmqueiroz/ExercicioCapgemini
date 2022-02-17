@@ -1,73 +1,38 @@
 # Exercicio Capgemini
 Academia Java
 
-# Questão 01
+## Resoluçao da Questão 01
 
-Escreva um algoritmo que mostre na tela uma escada de tamanho n utilizando o caractere * e espaços. A base e altura da escada devem ser iguais ao valor de n. A última linha não deve conter nenhum espaço.
-Exemplo: 
+Criei um **método** para receber um inteiro que será a quantidade de degraus que terá a minha escada. Dentro do método eu criei três variáveis, uma para receber a quantidade de asteristicos, que será iniciada com o número 1, outra váriavel para receber a quantidade de espaços em branco, que irá receber o numero recebido como parâmetro da função - 1, e a ultima variável é quantidade de linhas, que recebe o parâmetro da funçao.
 
-Entrada: 
+Fiz um Loop que acontecerá enquanto a quantidade de linhas for maior do que 0, dentro desse loop foi criado mais um loop que irá colocar a quantidade de espaços, e o outro loop irá colocar a quantidade de asterísticos, ao fim dos dois loops eu verifico se a quantidade de linhas, se for igual a 1 eu pulo uma linhha, modifico a quantidade de linhas, quantidade de espaços em branco e a quantidade de asteristicos e retorno para o loop, caso não eu encerro meu programa.
 
-    n = 6
-
-Saída:
-          
-            *  
-           **
-          ***
-         ****
-        *****
-       ******
-
-# Questão 02
-
-Débora se inscreveu em uma rede social para se manter em contato com seus amigos. A página de cadastro exigia o preenchimento dos campos de nome e senha, porém a senha precisa ser forte. O site considera uma senha forte quando ela satisfaz os seguintes critérios:
-•	Possui no mínimo 6 caracteres.
-•	Contém no mínimo 1 digito.
-•	Contém no mínimo 1 letra em minúsculo.
-•	Contém no mínimo 1 letra em maiúsculo.
-•	Contém no mínimo 1 caractere especial. Os caracteres especiais são: !@#$%^&*()-+
-Débora digitou uma string aleatória no campo de senha, porém ela não tem certeza se é uma senha forte. Para ajudar Débora, construa um algoritmo que informe qual é o número mínimo de caracteres que devem ser adicionados para uma string qualquer ser considerada segura.
-
-Exemplo:
-
-Entrada:
-
-     Ya3
-
-Saída:
-
-     3
-
-Explicação:
-Ela pode tornar a senha segura adicionando 3 caracteres, por exemplo, &ab, transformando a senha em Ya3&ab. 2 caracteres não são suficientes visto que a senha precisa ter um tamanho mínimo de 6 caracteres.
-# Questão 03
-Duas palavras podem ser consideradas anagramas de si mesmas se as letras de uma palavra podem ser realocadas para formar a outra palavra. Dada uma string qualquer, desenvolva um algoritmo que encontre o número de pares de substrings que são anagramas.
-Exemplos:
-
-Exemplo 1)
-
-Entrada:
-
-    ovo
-
-Saída:
-
-    3
-
-Explicação:
-A lista de todos os anagramas pares são: [o, o], [ov, vo] que estão nas posições [[0, 2], [0, 1], [1, 2]] respectivamente. 
-
-
-Exemplo 2)
-
-Entrada:
-
-    ifailuhkqq
-
-Saída:
-
-    3
-
-Explicação:
-A lista de todos os anagramas pares são: [i, i], [q, q] e [ifa, fai] que estão nas posições [[0, 3]], [[8, 9]] e [[0, 1, 2], [1, 2, 3]].
+~~~java
+	public static void geraEscada(int quantidadeDegraus) {
+		int quantidadeDeAsteristicos = 1;
+		int quantidadeDeLinhas = quantidadeDegraus;
+		int quantidadeEspaçoEmBranco = quantidadeDegraus - quantidadeDeAsteristicos;
+		
+		while(quantidadeDeLinhas > 0) {
+			
+			for(int contador = 0 ; contador < quantidadeEspaçoEmBranco; contador++) {
+				System.out.print(" ");
+			}
+			
+			for(int contador = 0 ; contador < quantidadeDeAsteristicos; contador++) {
+				System.out.print("*");
+			}
+			
+			if(quantidadeDeLinhas == 1) {
+				break;
+			}else {				
+				System.out.print("\n");
+			}
+			
+			quantidadeDeAsteristicos++;
+			quantidadeEspaçoEmBranco--;
+			quantidadeDeLinhas--;
+			
+		}
+	}
+~~~
