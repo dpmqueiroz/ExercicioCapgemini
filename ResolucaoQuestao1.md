@@ -31,8 +31,7 @@ Fiz um Loop que acontecerá enquanto a quantidade de linhas for maior do que 0, 
 			
 			quantidadeDeAsteriscos++;
 			quantidadeEspacoEmBranco--;
-			quantidadeDeLinhas--;
-			
+			quantidadeDeLinhas--;	
 		}
 	}
 ~~~
