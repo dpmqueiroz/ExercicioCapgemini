@@ -4,7 +4,7 @@ Academia Java
 # Questão 01
 
 Escreva um algoritmo que mostre na tela uma escada de tamanho n utilizando o caractere * e espaços. A base e altura da escada devem ser iguais ao valor de n. A última linha não deve conter nenhum espaço.
-Exemplo: *
+Exemplo: 
 
 Entrada: 
 
@@ -30,6 +30,7 @@ Débora se inscreveu em uma rede social para se manter em contato com seus amigo
 Débora digitou uma string aleatória no campo de senha, porém ela não tem certeza se é uma senha forte. Para ajudar Débora, construa um algoritmo que informe qual é o número mínimo de caracteres que devem ser adicionados para uma string qualquer ser considerada segura.
 
 Exemplo:
+
 Entrada:
 
      Ya3
@@ -42,8 +43,10 @@ Explicação:
 Ela pode tornar a senha segura adicionando 3 caracteres, por exemplo, &ab, transformando a senha em Ya3&ab. 2 caracteres não são suficientes visto que a senha precisa ter um tamanho mínimo de 6 caracteres.
 # Questão 03
 Duas palavras podem ser consideradas anagramas de si mesmas se as letras de uma palavra podem ser realocadas para formar a outra palavra. Dada uma string qualquer, desenvolva um algoritmo que encontre o número de pares de substrings que são anagramas.
-Exemplo:
+Exemplos:
+
 Exemplo 1)
+
 Entrada:
 
     ovo
@@ -57,6 +60,7 @@ A lista de todos os anagramas pares são: [o, o], [ov, vo] que estão nas posiç
 
 
 Exemplo 2)
+
 Entrada:
 
     ifailuhkqq
