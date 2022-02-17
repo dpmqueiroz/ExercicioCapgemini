@@ -11,11 +11,11 @@ Fiz um Loop que acontecerá enquanto a quantidade de linhas for maior do que 0, 
 		public static void geraEscada(int quantidadeDegraus) {
 		int quantidadeDeAsteriscos = 1;
 		int quantidadeDeLinhas = quantidadeDegraus;
-		int quantidadeEspaçoEmBranco = quantidadeDegraus - quantidadeDeAsteriscos;
+		int quantidadeEspacoEmBranco = quantidadeDegraus - quantidadeDeAsteriscos;
 		
 		while(quantidadeDeLinhas > 0) {
 			
-			for(int contador = 0 ; contador < quantidadeEspaçoEmBranco; contador++) {
+			for(int contador = 0 ; contador < quantidadeEspacoEmBranco; contador++) {
 				System.out.print(" ");
 			}
 			
@@ -30,7 +30,7 @@ Fiz um Loop que acontecerá enquanto a quantidade de linhas for maior do que 0, 
 			}
 			
 			quantidadeDeAsteriscos++;
-			quantidadeEspaçoEmBranco--;
+			quantidadeEspacoEmBranco--;
 			quantidadeDeLinhas--;
 			
 		}
