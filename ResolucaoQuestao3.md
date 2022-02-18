@@ -2,9 +2,10 @@
 # Exercicio Capgemini
 Academia Java
 
-## Resoluçao da Questão 02
+## Resoluçao da Questão 03
 
-Para Resolver a segunda questão eu criei várias funções, para não criar uma única função contendo tudo. Para cada regra de negócio eu criei uma função que retorna um booleano que responde a pergunta.
+Na questão numero tres temos as seguintes informações como exemplo :
+
 
 ~~~java
 	public static boolean contemCaractereEspecial(String senha) {
