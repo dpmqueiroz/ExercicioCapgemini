@@ -40,6 +40,24 @@ Agora vamos para o código para criar esse algorítmo. A primeira coisa que fiz 
 	}
 ~~~
 
+Para Fins de visualização eu criei essa função que recebe o index da String e o intervalo para então conseguir devolver os valores certos de onde foram encontrados os anagramas.
+~~~java
+	public static String pegarPosicoesDaSubString(int valorInicial, int intervalo) {
+		
+		StringBuilder resposta = new StringBuilder();
+		
+		for(int contador = 0; contador < intervalo; contador++) {
+			resposta.append((valorInicial + contador));
+			
+			if(contador != intervalo -1) {
+				resposta.append(", ");
+			}
+		}
+		
+		return resposta.toString();
+	}		
+~~~
+
 Tendo essa função de verificar se é anagrama ou não agora eu preciso criar uma função que receba como parametro a String que será analizada e preciso encontrar uma maneira para fazer meu algorítmo percorrer todas as hipóteses de subStrings, para isso eu criei tres variáveis, sendo elas, textoRecebido, parteTexto1 e parteTexto2.  O textoRecebido irá receber o parametro da função principal e ira colocar como .lowerCase , pois caso não seja feito isso podemos ter erro na função de verifar se é anagrama, pois letra maiúscula e minúscula são diferentes. Para percorrer minha String recebida eu criei três loops, responsáveis pelo intervalo das subStrings, valor da String1 e valor da String2, assim como mostra o exemplo abaixo:
 
 ~~~java
@@ -79,7 +97,8 @@ Tendo essa função de verificar se é anagrama ou não agora eu preciso criar u
 						
 						//Esse estrutura de decisão verifica se é anagrama ou não, caso seja adiciona uma string na minha lista.
 						if(eAnagrama(parteTexto1, parteTexto2))
-							listaAnagramas.add("String1 '" + parteTexto1 + "' inicia na posiçao [" + contString1 + "] e String2 '" + parteTexto2 + "' inicia na posiçao [" + contString2 +"]");
+							listaAnagramas.add("String1 '" + parteTexto1 + "' na posiçao [" + pegarPosicoesDaSubString(contString1, intervalo) + "] e "
+									+ "String2 '" + parteTexto2 + "' na posiçao [" + pegarPosicoesDaSubString(contString2, intervalo) +"]");
 						
 					}
 				}
@@ -87,7 +106,7 @@ Tendo essa função de verificar se é anagrama ou não agora eu preciso criar u
 		}
 		
 		// Coloquei essa exibição para padronizar.
-		System.out.println("\nVou imprimir o que achei sobre anagramas : ");
+		System.out.println("\nVou imprimir o que achei sobre anagramas das subStrings de '"+ texto +"' : ");
 		
 		if(listaAnagramas.isEmpty()) {
 			System.out.println("A palavra " + texto + " não possui nenhum par de anagrama.");
@@ -102,7 +121,25 @@ Tendo essa função de verificar se é anagrama ou não agora eu preciso criar u
 		// A Lista irá receber duas vezes o mesmo anagrama, por isso na hora de exibir eu divido por dois.
 		return listaAnagramas.size() / 2;
 		
-	}	
+	}		
 ~~~
 
 Optei por deixar o código comentado para facilitar a compreensão da metodologia usada.
+
+A saída desse código devolve a quantidade de pares de substrings que são anagramas, porém foi configurado para exibir na tela o seguinte resultado para facilitar o entendimento
+
+	Vou imprimir o que achei sobre anagramas das subStrings de 'ovo' : 
+	String1 'o' na posiçao [0] e String2 'o' na posiçao [2]
+	String1 'o' na posiçao [2] e String2 'o' na posiçao [0]
+	String1 'ov' na posiçao [0, 1] e String2 'vo' na posiçao [1, 2]
+	String1 'vo' na posiçao [1, 2] e String2 'ov' na posiçao [0, 1]
+	A palavra ovo possui 2  par(es) de anagrama(s).
+
+	Vou imprimir o que achei sobre anagramas das subStrings de 'ifailuhkqq' : 
+	String1 'i' na posiçao [0] e String2 'i' na posiçao [3]
+	String1 'i' na posiçao [3] e String2 'i' na posiçao [0]
+	String1 'q' na posiçao [8] e String2 'q' na posiçao [9]
+	String1 'q' na posiçao [9] e String2 'q' na posiçao [8]
+	String1 'ifa' na posiçao [0, 1, 2] e String2 'fai' na posiçao [1, 2, 3]
+	String1 'fai' na posiçao [1, 2, 3] e String2 'ifa' na posiçao [0, 1, 2]
+	A palavra ifailuhkqq possui 3  par(es) de anagrama(s).
