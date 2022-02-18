@@ -32,6 +32,7 @@ ou os testes unitários que estão em :
         
 nesse local está os testes unitários, tendo em vista que a questão de número 1 é visual e não retorna nada eu não criei teste unitário para ela.
 
-# Observação, deixei o código com comentários e saídas no Console somente para facilitar o entendimento, caso fosse um código que iria para produção ou algo do tipo não teria os comentários e nem as saídas no Console.
+## Observação
+Deixei o código com comentários e saídas no Console somente para facilitar o entendimento, caso fosse um código que iria para produção ou algo do tipo não teria os comentários e nem as saídas no Console.
 
 
