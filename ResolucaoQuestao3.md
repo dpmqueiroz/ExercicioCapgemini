@@ -126,7 +126,7 @@ Tendo essa função de verificar se é anagrama ou não agora eu preciso criar u
 
 Optei por deixar o código comentado para facilitar a compreensão da metodologia usada.
 
-A saída desse código devolve a quantidade de pares de substrings que são anagramas, porém foi configurado para exibir na tela o seguinte resultado para facilitar o entendimento
+A saída desse código devolve a quantidade de pares de substrings que são anagramas, porém foi configurado para exibir na tela o seguinte resultado para facilitar o entendimento: 
 
 	Vou imprimir o que achei sobre anagramas das subStrings de 'ovo' : 
 	String1 'o' na posiçao [0] e String2 'o' na posiçao [2]
