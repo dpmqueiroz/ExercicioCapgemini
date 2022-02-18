@@ -22,14 +22,14 @@ Para executar o programa basta clonar o repositório :
 
          git@github.com:dpmqueiroz/ExercicioCapgemini.git
      
-e executar a aplicação através do
+e executar a aplicação através do :
            
          ExercicioCapgemini/DesafioCapgemini/src/com/capgemini/app/AppExercicio.java 
          
-ou os testes unitários que estão :
+ou os testes unitários que estão em :
 
-        ExercicioCapgemini/DesafioCapgemini/src/com/capgemini/testeunitario/
+        ExercicioCapgemini/DesafioCapgemini/src/com/capgemini/testeunitario/CapgeminiUtilsTest.java
         
-nesse local tem dois testes, sendo um para a questão numero 2, e um para questão número 3, a questão de numero 1, tendo em vista o seu retorno ser VOID eu não criei teste unitário.
+nesse local está os testes unitários, tendo em vista que a questão de número 1 não retorna nada eu não criei teste unitário para ela.
 
 
