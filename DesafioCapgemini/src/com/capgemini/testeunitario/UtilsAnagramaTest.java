@@ -12,35 +12,35 @@ public class UtilsAnagramaTest {
 	
 	
 	@Test
-	public void AnagramaparaOvoRetorno2() {
+	public void ParesDeAnagramasParaOvoDeveriaRetornar2() {
 		
 		 int resultado = CapgeminiUtils.descobrirParesAnagramas("ovo");
 		 assertEquals(2, resultado);
 	}
 	
 	@Test
-	public void AnagramaparaIfailuhkqqRetorno3() {
+	public void ParesDeAnagramaParaIfailuhkqqDeveriaRetornar3() {
 		
 		 int resultado = CapgeminiUtils.descobrirParesAnagramas("ifailuhkqq");
 		 assertEquals(3, resultado);
 	}
 	
 	@Test
-	public void AnagramaparaBananaRetorno12() {
+	public void ParesDeAnagramaParaBananaDeveriaRetornar12() {
 		
 		 int resultado = CapgeminiUtils.descobrirParesAnagramas("banana");
 		 assertEquals(12, resultado);
 	}
 	
 	@Test
-	public void AnagramaparaCapgeminiRetorno12() {
+	public void ParesDeAnagramaParaCapgeminiDeveriaRetornar2() {
 		
 		 int resultado = CapgeminiUtils.descobrirParesAnagramas("capgemini");
 		 assertEquals(2, resultado);
 	}
 	
 	@Test
-	public void AnagramaparaJaveiroRetorno12() {
+	public void ParesDeAnagramaParaJaveiroRetornar0() {
 		
 		 int resultado = CapgeminiUtils.descobrirParesAnagramas("Javeiro");
 		 assertEquals(0, resultado);
