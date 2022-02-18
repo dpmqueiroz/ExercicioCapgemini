@@ -6,45 +6,45 @@ import org.junit.jupiter.api.Test;
 
 import com.capgemini.utils.CapgeminiUtils;
 
-public class UtilsSenhaTest {
+public class CapgeminiUtilsTest {
 
 	@Test
-	public void SenhaDanRetorno3() {
+	public void SenhaDanRetornoDeveriaSer3() {
 		
 		 int resultado = CapgeminiUtils.validaSenha("dan");
 		 assertEquals(3, resultado);
 	}
 	
 	@Test
-	public void SenhaServinRetorno1() {
+	public void SenhaServinRetornoDeveriaSer1() {
 		
 		 int resultado = CapgeminiUtils.validaSenha("Servi");
 		 assertEquals(1, resultado);
 	}
 	
 	@Test
-	public void SenhaDanielCorretonRetorno0() {
+	public void SenhaDan1elCorretonRetornoDeveriaSer0() {
 		
 		 int resultado = CapgeminiUtils.validaSenha("D@n1el");
 		 assertEquals(0, resultado);
 	}
 	
 	@Test
-	public void SenhaVazionRetorno0() {
+	public void SenhaVazionRetornoDeveriaSer0() {
 		
 		 int resultado = CapgeminiUtils.validaSenha("");
 		 assertEquals(6, resultado);
 	}
 	
 	@Test
-	public void SenhadanielRetorno0() {
+	public void SenhadanielRetornoDeveria0() {
 		
 		 int resultado = CapgeminiUtils.validaSenha("daniel");
 		 assertEquals(-1, resultado);
 	}
 	
 	@Test
-	public void SenhaYa3Retorno0() {
+	public void SenhaYa3RetornoDeveria3() {
 		
 		 int resultado = CapgeminiUtils.validaSenha("ya3");
 		 assertEquals(3, resultado);
