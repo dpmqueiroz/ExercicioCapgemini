@@ -36,7 +36,7 @@ Fiz um Loop que acontecerá enquanto a quantidade de linhas for maior do que 0, 
 	}
 ~~~
 
-Aqui um exemplo do retorno dessa função caso a quantidade degrus (n) seja igual a 8 
+Aqui um exemplo do retorno dessa função caso a quantidade degraus (n) seja igual a 8 
 
            *
           **
