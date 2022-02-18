@@ -40,7 +40,7 @@ Agora vamos para o código para criar esse algorítmo. A primeira coisa que fiz 
 	}
 ~~~
 
-Tendo essa função de verificar se é anagrama ou não agora eu preciso criar uma função que receba como parametro a String que será analizada e preciso encontrar uma maneira para fazer meu algorítmo percorrer todas as hipóteses de subStrings, para isso eu criei tres variáveis, sendo elas, textoRecebido, parteTexto1 e parteTexto2.  O textoRecebido irá receber o parametro da função principal e ira colocar como .lowerCase , pois caso não seja feito isso podemos ter erro na função de verifar se é anagrama, pois letra maiúscula e minúscula são diferentes. Para percorrer minha String recebida eu preciso criar 
+Tendo essa função de verificar se é anagrama ou não agora eu preciso criar uma função que receba como parametro a String que será analizada e preciso encontrar uma maneira para fazer meu algorítmo percorrer todas as hipóteses de subStrings, para isso eu criei tres variáveis, sendo elas, textoRecebido, parteTexto1 e parteTexto2.  O textoRecebido irá receber o parametro da função principal e ira colocar como .lowerCase , pois caso não seja feito isso podemos ter erro na função de verifar se é anagrama, pois letra maiúscula e minúscula são diferentes. Para percorrer minha String recebida eu criei três loops, responsáveis pelo intervalo das subStrings, valor da String1 e valor da String2, assim como mostra o exemplo abaixo:
 
 ~~~java
     public static int descobrirParesAnagramas(String texto) {
@@ -51,33 +51,42 @@ Tendo essa função de verificar se é anagrama ou não agora eu preciso criar u
 		
 		List<String> listaAnagramas = new ArrayList<String>();
 	
-		for(int intervalo = 1; intervalo < (textoRecebido.length()); intervalo++) {
+		//Este loop controla o tamanho da subString, que começa com 1 e vai até tamanho da String - 1
+		for(int intervalo = 1; intervalo < textoRecebido.length(); intervalo++) {
 			
-			for(int contLetras = 0; contLetras < textoRecebido.length(); contLetras++) {
+			//Este Loop controla o valor da String1.
+			for(int contString1 = 0; contString1 < textoRecebido.length(); contString1++) {
 				
-				if(contLetras + intervalo <= textoRecebido.length()) {
-					parteTexto1 = textoRecebido.substring(contLetras, contLetras + intervalo);				
+				//Esta estrutura de decisão impede que crie uma subString além do que minha string permite, o que ocasionaria em um erro.
+				if(contString1 + intervalo <= textoRecebido.length()) {
+					parteTexto1 = textoRecebido.substring(contString1, contString1 + intervalo);				
 				}else {
 					continue;
 				}
 				
-				for(int contComparacao = 0; contComparacao < texto.length(); contComparacao++) {
+				//Este Loop controla o valor da String2, pois esse loop é responsável por alterar o valor da String2 e comparar com a String1 
+				for(int contString2 = 0; contString2 < texto.length(); contString2++) {
 					
-					if(contComparacao + intervalo <= textoRecebido.length()) {					
-						parteTexto2 = textoRecebido.substring(contComparacao, contComparacao + intervalo);
+					//Esta estrutura de decisão impede que crie uma subString além do que minha string permite, o que ocasionaria em um erro.
+					if(contString2 + intervalo <= textoRecebido.length()) {					
+						parteTexto2 = textoRecebido.substring(contString2, contString2 + intervalo);
 					}else {
 						continue;
 					}
 
-					if(contLetras != contComparacao)
-					 if(eAnagrama(parteTexto1, parteTexto2))
-						 listaAnagramas.add("String1 '" + parteTexto1 + "' inicia na posiçao [" + contLetras + "] e String2 '" + parteTexto2 + "' inicia na posiçao [" + contComparacao +"]");
-					
+					//Essa estrutura de decisão impede que eu compare a subString com ela mesmo, pois os loops estariam alinhados.
+					if(contString1 != contString2) {
+						
+						//Esse estrutura de decisão verifica se é anagrama ou não, caso seja adiciona uma string na minha lista.
+						if(eAnagrama(parteTexto1, parteTexto2))
+							listaAnagramas.add("String1 '" + parteTexto1 + "' inicia na posiçao [" + contString1 + "] e String2 '" + parteTexto2 + "' inicia na posiçao [" + contString2 +"]");
+						
+					}
 				}
-				
 			}
 		}
 		
+		// Coloquei essa exibição para padronizar.
 		System.out.println("\nVou imprimir o que achei sobre anagramas : ");
 		
 		if(listaAnagramas.isEmpty()) {
@@ -86,10 +95,14 @@ Tendo essa função de verificar se é anagrama ou não agora eu preciso criar u
 			listaAnagramas.forEach((p) -> {
 				System.out.println(p);
 			});
+			
 			System.out.println("A palavra "+ texto + " possui "+ listaAnagramas.size() / 2 +"  par(es) de anagrama(s).");
 		}
 			
+		// A Lista irá receber duas vezes o mesmo anagrama, por isso na hora de exibir eu divido por dois.
 		return listaAnagramas.size() / 2;
 		
-	}
+	}	
 ~~~
+
+Optei por deixar o código comentado para facilitar a compreensão da metodologia usada.
