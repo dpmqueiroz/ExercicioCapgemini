@@ -30,6 +30,6 @@ ou os testes unitários que estão em :
 
         ExercicioCapgemini/DesafioCapgemini/src/com/capgemini/testeunitario/CapgeminiUtilsTest.java
         
-nesse local está os testes unitários, tendo em vista que a questão de número 1 não retorna nada eu não criei teste unitário para ela.
+nesse local está os testes unitários, tendo em vista que a questão de número 1 é visual e não retorna nada eu não criei teste unitário para ela.
 
 
