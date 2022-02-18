@@ -49,5 +49,40 @@ public class UtilsSenhaTest {
 		 int resultado = CapgeminiUtils.validaSenha("ya3");
 		 assertEquals(3, resultado);
 	}
+	
+	@Test
+	public void ParesDeAnagramasParaOvoDeveriaRetornar2() {
+		
+		 int resultado = CapgeminiUtils.descobrirParesAnagramas("ovo");
+		 assertEquals(2, resultado);
+	}
+	
+	@Test
+	public void ParesDeAnagramaParaIfailuhkqqDeveriaRetornar3() {
+		
+		 int resultado = CapgeminiUtils.descobrirParesAnagramas("ifailuhkqq");
+		 assertEquals(3, resultado);
+	}
+	
+	@Test
+	public void ParesDeAnagramaParaBananaDeveriaRetornar12() {
+		
+		 int resultado = CapgeminiUtils.descobrirParesAnagramas("banana");
+		 assertEquals(12, resultado);
+	}
+	
+	@Test
+	public void ParesDeAnagramaParaCapgeminiDeveriaRetornar2() {
+		
+		 int resultado = CapgeminiUtils.descobrirParesAnagramas("capgemini");
+		 assertEquals(2, resultado);
+	}
+	
+	@Test
+	public void ParesDeAnagramaParaJaveiroRetornar0() {
+		
+		 int resultado = CapgeminiUtils.descobrirParesAnagramas("Javeiro");
+		 assertEquals(0, resultado);
+	}
 
 }
