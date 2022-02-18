@@ -117,4 +117,18 @@ A seguir segue o código que chama as demais funções e retorna o inteiro refer
 	}
 ~~~
 
+Segue dois exemplos de retorno dessa função, lembrando ela só devolve um inteiro, porém ela anota no log as seguintes informações:
+
+	RESULTADO para senha 'ya3' ->  
+	- A senha deve possuir no mínimo 6 caracteres. Você deve acrescentar mais 3 caracter(es).
+
+	RESULTADO para senha 'daniel' ->  
+
+	- A senha deve possuir no mínimo 1 dígito. Exemplo : '123456789'.
+	- A senha deve possuir no mínimo UMA letra maiúscula.
+	- A senha deve possuir no mínimo UM caracter especial. Exemplo : '!@#$%^&*()-+'
+
+	RESULTADO para senha 'D@n1el' ->  
+	- Senha considerada FORTE.
+
 
