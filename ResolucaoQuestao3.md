@@ -2,6 +2,14 @@
 # Exercicio Capgemini
 Academia Java
 
+## Links Uteis ( Documentação )
+
+*[Questões](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/Questoes.md)
+
+*[Resolução da 1ª Questão](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/ResolucaoQuestao1.md)
+
+*[Resolução da 2ª Questão](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/ResolucaoQuestao2.md)
+
 ## Resoluçao da Questão 03
 
 Na questão numero tres temos a seguinte informação como exemplo :
