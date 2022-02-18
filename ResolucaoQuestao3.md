@@ -6,117 +6,29 @@ Academia Java
 
 Na questão numero tres temos as seguintes informações como exemplo :
 
+Exemplo 1)
 
-~~~java
-	public static boolean contemCaractereEspecial(String senha) {
-		
-		for(int c = 0; c < senha.length(); c++) {
-			
-			if(!Character.isAlphabetic(senha.charAt(c)) && !Character.isDigit(senha.charAt(c)) ) {
-				return true;
-			}
-		}
-		return false;
-	}
-~~~
+Entrada:
 
-~~~java
-	public static boolean contemUmDigito(String senha) {
-		
-		for(int c = 0; c < senha.length(); c++) {
-			if(Character.isDigit(senha.charAt(c))){
-				return true;
-			}
-		}
-		return false;
-	}
-~~~
-~~~java
-	public static boolean contemLetraMaiuscula(String senha) {
-		
-		for(int c = 0; c < senha.length(); c++) {
-			if(Character.isUpperCase(senha.charAt(c))) {
-				return true;
-			}
-		}
-		return false;
-	}
-~~~
-~~~java
-	public static boolean contemLetraMinuscula(String senha) {
-		
-		for(int c = 0; c < senha.length(); c++) {
-			if(Character.isLowerCase(senha.charAt(c))) {
-				return true;
-			}
-		}
-		return false;
-	}
-~~~
-~~~java
-	public static boolean contemCaractereEspecial(String senha) {
-		
-		for(int c = 0; c < senha.length(); c++) {
-			
-			if(!Character.isAlphabetic(senha.charAt(c)) && !Character.isDigit(senha.charAt(c)) ) {
-				return true;
-			}
-		}
-		return false;
-	}
-~~~
+    ovo
 
-Apos criar essas funçoes para validar algumas exigências na senha eu criei a função principal que irá chamar todas essas funçoes e retornar um int confirmando se a senha é forte, ou avisando qual regra de negócio ela não atingiu.
+Saída:
 
-status :
+    3
 
-      -  -1 = possui as 6 letras que são minimas porém violou alguma regra de négocio que será exibida utilizando System.Out.PrintLn.
-      -  0 = Sucesso a senha é forte
-      -  0 até 6 = quantas letras são necessárias para para atingir o mínimo de 6 letras
-      
-A seguir segue o código que chama as demais funções e retorna o inteiro referente a tabela acima:
-
-~~~java
-	public static int validaSenha(String senha){
-		
-		System.out.println("\nRESULTADO para senha '" + senha + "' ->  ");
-		StringBuilder resposta = new StringBuilder();
-		int resultado = 0;
-		
-		if(senha.length() < 6) {
-			System.out.println(("- A senha deve possuir no mínimo 6 caracteres. Você deve acrescentar mais " + (6 - senha.length()) + " caracter(es)."));
-			return 6 - senha.length();	
-		}
-		
-		if(!contemUmDigito(senha)) {
-			resultado = -1;
-			resposta.append("\n- A senha deve possuir no mínimo 1 dígito. Exemplo : '123456789'.");
-		}
-		
-		if(!contemLetraMinuscula(senha)) {
-			resultado = -1;
-			resposta.append("\n- A senha deve possuir no mínimo UMA letra minúscula.");
-		}
-		
-		if(!contemLetraMaiuscula(senha)) {
-			resultado = -1;
-			resposta.append("\n- A senha deve possuir no mínimo UMA letra maiúscula.");
-		}
-		
-		if(!contemCaractereEspecial(senha)) {
-			resultado = -1;
-			resposta.append("\n- A senha deve possuir no mínimo UM caracter especial. Exemplo : '!@#$%^&*()-+'");
-		}
-		
-		if(resposta.isEmpty()) {
-			System.out.println(("- Senha considerada FORTE."));
-			return resultado;
-		}else {
-			System.out.print(resposta.toString() + "\n");
-			return resultado;
-		}
-		
-	}
-~~~
+Explicação:
+A lista de todos os anagramas pares são: [o, o], [ov, vo] que estão nas posições [[0, 2], [0, 1], [1, 2]] respectivamente. 
 
 
+Exemplo 2)
+
+Entrada:
+
+    ifailuhkqq
+
+Saída:
+
+    3
+
+Explicação:
+A lista de todos os anagramas pares são: [i, i], [q, q] e [ifa, fai] que estão nas posições [[0, 3]], [[8, 9]] e [[0, 1, 2], [1, 2, 3]].
