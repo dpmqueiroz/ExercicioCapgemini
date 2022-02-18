@@ -6,16 +6,6 @@ Academia Java
 Para Resolver a segunda questão eu criei várias funções, para não criar uma única função contendo tudo. Para cada regra de negócio eu criei uma função que retorna um booleano que responde a pergunta.
 
 ~~~java
-	public static boolean validaMinimoSeisCaracteres(String senha){
-		if(senha.length() <= 5) {
-			return false;
-		}else {
-			return true;
-		}
-	}
-~~~
-
-~~~java
 	public static boolean contemCaractereEspecial(String senha) {
 		
 		for(int c = 0; c < senha.length(); c++) {
@@ -77,36 +67,45 @@ Para Resolver a segunda questão eu criei várias funções, para não criar uma
 Apos criar essas funçoes para validar algumas exigências na senha eu criei a função principal que irá chamar todas essas funçoes e retornar uma String confirmando se a senha é forte, ou avisando qual regra de negócio ela não atingiu.
 
 ~~~java
-		public static String validaSenha(String senha){
+	public static int validaSenha(String senha){
 		
+		System.out.println("\nRESULTADO para senha '" + senha + "' ->  ");
 		StringBuilder resposta = new StringBuilder();
+		int resultado = 0;
 		
-		if(!validaMinimoSeisCaracteres(senha)) {
-			resposta.append("\n- A senha deve possuir no mínimo 6 caracteres. Você deve acrescentar mais " + (6 - senha.length()) + " caracter(es).");
+		if(senha.length() < 6) {
+			System.out.println(("- A senha deve possuir no mínimo 6 caracteres. Você deve acrescentar mais " + (6 - senha.length()) + " caracter(es)."));
+			return 6 - senha.length();	
 		}
 		
 		if(!contemUmDigito(senha)) {
+			resultado = -1;
 			resposta.append("\n- A senha deve possuir no mínimo 1 dígito. Exemplo : '123456789'.");
 		}
 		
 		if(!contemLetraMinuscula(senha)) {
+			resultado = -1;
 			resposta.append("\n- A senha deve possuir no mínimo UMA letra minúscula.");
 		}
 		
 		if(!contemLetraMaiuscula(senha)) {
+			resultado = -1;
 			resposta.append("\n- A senha deve possuir no mínimo UMA letra maiúscula.");
 		}
 		
 		if(!contemCaractereEspecial(senha)) {
+			resultado = -1;
 			resposta.append("\n- A senha deve possuir no mínimo UM caracter especial. Exemplo : '!@#$%^&*()-+'");
 		}
 		
 		if(resposta.isEmpty()) {
-			resposta.append("- Senha considerada FORTE.");
-			return resposta.toString();
+			System.out.println(("- Senha considerada FORTE."));
+			return resultado;
+		}else {
+			System.out.print(resposta.toString() + "\n");
+			return resultado;
 		}
 		
-		return resposta.toString();
 	}
 ~~~
 
