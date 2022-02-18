@@ -69,13 +69,13 @@ Tendo essa função de verificar se é anagrama ou não agora eu preciso criar u
 		
 		List<String> listaAnagramas = new ArrayList<String>();
 	
-		//Este loop controla o tamanho da subString, que começa com 1 e vai até tamanho da String - 1
+		//Este loop controla o tamanho da subString, que começa com 1 e vai até tamanho do textoRecebido - 1
 		for(int intervalo = 1; intervalo < textoRecebido.length(); intervalo++) {
 			
 			//Este Loop controla o valor da String1.
 			for(int contString1 = 0; contString1 < textoRecebido.length(); contString1++) {
 				
-				//Esta estrutura de decisão impede que crie uma subString além do que minha string permite, o que ocasionaria em um erro.
+				//Esta estrutura de decisão impede que crie uma subString que vá além do que minha string permite, o que ocasionaria em um erro.
 				if(contString1 + intervalo <= textoRecebido.length()) {
 					parteTexto1 = textoRecebido.substring(contString1, contString1 + intervalo);				
 				}else {
@@ -85,7 +85,7 @@ Tendo essa função de verificar se é anagrama ou não agora eu preciso criar u
 				//Este Loop controla o valor da String2, pois esse loop é responsável por alterar o valor da String2 e comparar com a String1 
 				for(int contString2 = 0; contString2 < texto.length(); contString2++) {
 					
-					//Esta estrutura de decisão impede que crie uma subString além do que minha string permite, o que ocasionaria em um erro.
+					//Esta estrutura de decisão impede que crie uma subString que vá além do que minha string permite, o que ocasionaria em um erro.
 					if(contString2 + intervalo <= textoRecebido.length()) {					
 						parteTexto2 = textoRecebido.substring(contString2, contString2 + intervalo);
 					}else {
