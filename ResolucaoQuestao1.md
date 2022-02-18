@@ -7,7 +7,7 @@ Academia Java
 
 *[Resolução da 2ª Questão](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/ResolucaoQuestao2.md)
 
-*[Resolução da 3ª Questão](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/ResolucaoQuestao2.md)
+*[Resolução da 3ª Questão](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/ResolucaoQuestao3.md)
 
 ## Resoluçao da Questão 01
 
