@@ -74,7 +74,7 @@ Para Resolver a segunda questão eu criei várias funções, para não criar uma
 
 Apos criar essas funçoes para validar algumas exigências na senha eu criei a função principal que irá chamar todas essas funçoes e retornar um int confirmando se a senha é forte, ou avisando qual regra de negócio ela não atingiu.
 
-status :
+status de acordo com o retorno da função :
 
       -  -1 = possui as 6 letras que são minimas porém violou alguma regra de négocio que será exibida utilizando System.Out.PrintLn.
       -  0 = Sucesso a senha é forte
