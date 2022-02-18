@@ -1,6 +1,14 @@
 # Exercicio Capgemini
 Academia Java
 
+## Links Uteis ( Documentação )
+
+*[Questões](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/Questoes.md)
+
+*[Resolução da 1ª Questão](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/ResolucaoQuestao1.md)
+
+*[Resolução da 3ª Questão](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/ResolucaoQuestao2.md)
+
 ## Resoluçao da Questão 02
 
 Para Resolver a segunda questão eu criei várias funções, para não criar uma única função contendo tudo. Para cada regra de negócio eu criei uma função que retorna um booleano que responde a pergunta.
