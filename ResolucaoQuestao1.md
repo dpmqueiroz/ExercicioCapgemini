@@ -1,6 +1,14 @@
 # Exercicio Capgemini
 Academia Java
 
+## Links Uteis ( Documentação )
+
+*[Questões](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/Questoes.md)
+
+*[Resolução da 2ª Questão](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/ResolucaoQuestao2.md)
+
+*[Resolução da 3ª Questão](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/ResolucaoQuestao2.md)
+
 ## Resoluçao da Questão 01
 
 Criei um método para receber um inteiro que será a quantidade de degraus que terá a minha escada. Dentro do método eu criei três variáveis, uma para receber a quantidade de asteriscos, que será iniciada com o número 1, outra váriavel para receber a quantidade de espaços em branco, que irá receber o numero recebido como parâmetro da função - 1, e a ultima variável é quantidade de linhas, que recebe o parâmetro da funçao.
