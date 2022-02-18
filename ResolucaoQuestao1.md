@@ -3,11 +3,13 @@ Academia Java
 
 ## Links Uteis ( Documentação )
 
-*[Questões](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/Questoes.md)
+* [Inicio (ReadMe.md)](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/README.md)
 
-*[Resolução da 2ª Questão](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/ResolucaoQuestao2.md)
+* [Questões](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/Questoes.md)
 
-*[Resolução da 3ª Questão](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/ResolucaoQuestao3.md)
+* [Resolução da 2ª Questão](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/ResolucaoQuestao2.md)
+
+* [Resolução da 3ª Questão](https://github.com/dpmqueiroz/ExercicioCapgemini/blob/main/ResolucaoQuestao3.md)
 
 ## Resoluçao da Questão 01
 
