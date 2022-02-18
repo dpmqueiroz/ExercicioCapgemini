@@ -64,7 +64,15 @@ Para Resolver a segunda questão eu criei várias funções, para não criar uma
 	}
 ~~~
 
-Apos criar essas funçoes para validar algumas exigências na senha eu criei a função principal que irá chamar todas essas funçoes e retornar uma String confirmando se a senha é forte, ou avisando qual regra de negócio ela não atingiu.
+Apos criar essas funçoes para validar algumas exigências na senha eu criei a função principal que irá chamar todas essas funçoes e retornar um int confirmando se a senha é forte, ou avisando qual regra de negócio ela não atingiu.
+
+status :
+
+      -  -1 = possui as 6 letras que são minimas porém violou alguma regra de négocio que será exibida utilizando System.Out.PrintLn.
+      -  0 = Sucesso a senha é forte
+      -  0 até 6 = quantas letras são necessárias para para atingir o mínimo de 6 letras
+      
+A seguir segue o código que chama as demais funções e retorna o inteiro referente a tabela acima:
 
 ~~~java
 	public static int validaSenha(String senha){
