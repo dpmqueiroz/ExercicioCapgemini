@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+import com.capgemini.app.AppExercicio;
 import com.capgemini.utils.CapgeminiUtils;
 
 public class CapgeminiUtilsTest {
@@ -51,6 +52,13 @@ public class CapgeminiUtilsTest {
 	}
 	
 	@Test
+	public void SenhaYDWRDSIRetornoDeveria3() {
+		
+		 int resultado = CapgeminiUtils.validaSenha("YDWRDSI");
+		 assertEquals(-1, resultado);
+	}
+	
+	@Test
 	public void ParesDeAnagramasParaOvoDeveriaRetornar2() {
 		
 		 int resultado = CapgeminiUtils.descobrirParesAnagramas("ovo");
@@ -84,5 +92,25 @@ public class CapgeminiUtilsTest {
 		 int resultado = CapgeminiUtils.descobrirParesAnagramas("Javeiro");
 		 assertEquals(0, resultado);
 	}
+	
+	@Test
+	public void gerarEscadaComValor6() {
+		
+		 CapgeminiUtils.geraEscada(6);
+	}
+	
+	@Test
+	public void gerarEscadaComValorMenos1() {
+		
+		 CapgeminiUtils.geraEscada(-1);
+	}
+	
+	@Test
+	public void testeDeCoberturaApplicationMain() {
+		
+		AppExercicio app = new AppExercicio();
+		app.main(null);
+	}
 
 }
+
