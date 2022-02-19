@@ -29,11 +29,10 @@ e executar a aplicação através do :
 ou os testes unitários que estão em :
 
         ExercicioCapgemini/DesafioCapgemini/src/com/capgemini/testeunitario/CapgeminiUtilsTest.java
-        
+    
+### Print Teste de Cobertura do código
 ![bc0afc37-4d72-46aa-9798-92cc93fb9dd2](https://user-images.githubusercontent.com/59806934/154782707-2f9bde87-a34c-4939-a062-a3fbb1e96f18.jpg)
-        
-nesse local está os testes unitários, tendo em vista que a questão de número 1 é visual e não retorna nada eu não criei teste unitário para ela.
-
+      
 ## Observação
 Deixei o código com comentários e saídas no Console somente para facilitar o entendimento, caso fosse um código que iria para produção ou algo do tipo não teria os comentários e nem as saídas no Console.
 
